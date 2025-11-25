@@ -50374,3 +50374,793 @@ ego7","timestamp":1764091753704}
 )
 
 2025-11-26 01:59:34 - 保存结果: 成功
+2025-11-26 01:59:44 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 01:59:44 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":56,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 01:59:44 - 进入handleStatusUpdate函数
+2025-11-26 01:59:44 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":56,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 01:59:44 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 56
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+, 错误码: 0
+2025-11-26 01:59:44 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 56
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+
+2025-11-26 01:59:44 - 现有设备数据: Array
+(
+    [7c76895b] => Array
+        (
+            [deviceId] => 7c76895b
+            [deviceName] => 23046RP50C
+            [batteryLevel] => 56
+            [isCharging] => 
+            [wifiConnected] => 
+            [cellularConnected] => 1
+            [networkType] => Unknown,Unknown
+            [location] => ♡这个不能告诉你们✿
+            [currentApp] => bin.mt.plus
+            [lastUpdate] => 2025-11-26 01:59:34
+            [clientIP] => 192.168.78.225
+        )
+
+)
+
+2025-11-26 01:59:44 - 保存结果: 成功
+2025-11-26 01:59:55 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 01:59:55 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":56,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 01:59:55 - 进入handleStatusUpdate函数
+2025-11-26 01:59:55 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":56,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 01:59:55 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 56
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+, 错误码: 0
+2025-11-26 01:59:55 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 56
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+
+2025-11-26 01:59:55 - 现有设备数据: Array
+(
+    [7c76895b] => Array
+        (
+            [deviceId] => 7c76895b
+            [deviceName] => 23046RP50C
+            [batteryLevel] => 56
+            [isCharging] => 
+            [wifiConnected] => 
+            [cellularConnected] => 1
+            [networkType] => Unknown,Unknown
+            [location] => ♡这个不能告诉你们✿
+            [currentApp] => bin.mt.plus
+            [lastUpdate] => 2025-11-26 01:59:44
+            [clientIP] => 192.168.78.225
+        )
+
+)
+
+2025-11-26 01:59:55 - 保存结果: 成功
+2025-11-26 02:00:05 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 02:00:05 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":56,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:00:05 - 进入handleStatusUpdate函数
+2025-11-26 02:00:05 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":56,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:00:05 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 56
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+, 错误码: 0
+2025-11-26 02:00:05 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 56
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+
+2025-11-26 02:00:05 - 现有设备数据: Array
+(
+    [7c76895b] => Array
+        (
+            [deviceId] => 7c76895b
+            [deviceName] => 23046RP50C
+            [batteryLevel] => 56
+            [isCharging] => 
+            [wifiConnected] => 
+            [cellularConnected] => 1
+            [networkType] => Unknown,Unknown
+            [location] => ♡这个不能告诉你们✿
+            [currentApp] => bin.mt.plus
+            [lastUpdate] => 2025-11-26 01:59:55
+            [clientIP] => 192.168.78.225
+        )
+
+)
+
+2025-11-26 02:00:05 - 保存结果: 成功
+2025-11-26 02:00:16 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 02:00:16 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":56,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:00:16 - 进入handleStatusUpdate函数
+2025-11-26 02:00:16 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":56,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:00:16 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 56
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+, 错误码: 0
+2025-11-26 02:00:16 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 56
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+
+2025-11-26 02:00:16 - 现有设备数据: Array
+(
+    [7c76895b] => Array
+        (
+            [deviceId] => 7c76895b
+            [deviceName] => 23046RP50C
+            [batteryLevel] => 56
+            [isCharging] => 
+            [wifiConnected] => 
+            [cellularConnected] => 1
+            [networkType] => Unknown,Unknown
+            [location] => ♡这个不能告诉你们✿
+            [currentApp] => bin.mt.plus
+            [lastUpdate] => 2025-11-26 02:00:05
+            [clientIP] => 192.168.78.225
+        )
+
+)
+
+2025-11-26 02:00:16 - 保存结果: 成功
+2025-11-26 02:00:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:00:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:00:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764093623735}
+2025-11-26 02:00:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:00:26 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 02:00:26 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":56,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:00:26 - 进入handleStatusUpdate函数
+2025-11-26 02:00:26 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":56,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:00:26 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 56
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+, 错误码: 0
+2025-11-26 02:00:26 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 56
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+
+2025-11-26 02:00:26 - 现有设备数据: Array
+(
+    [7c76895b] => Array
+        (
+            [deviceId] => 7c76895b
+            [deviceName] => 23046RP50C
+            [batteryLevel] => 56
+            [isCharging] => 
+            [wifiConnected] => 
+            [cellularConnected] => 1
+            [networkType] => Unknown,Unknown
+            [location] => ♡这个不能告诉你们✿
+            [currentApp] => bin.mt.plus
+            [lastUpdate] => 2025-11-26 02:00:16
+            [clientIP] => 192.168.78.225
+        )
+
+)
+
+2025-11-26 02:00:26 - 保存结果: 成功
+2025-11-26 02:00:37 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 02:00:37 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":56,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:00:37 - 进入handleStatusUpdate函数
+2025-11-26 02:00:37 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":56,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:00:37 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 56
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+, 错误码: 0
+2025-11-26 02:00:37 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 56
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+
+2025-11-26 02:00:37 - 现有设备数据: Array
+(
+    [7c76895b] => Array
+        (
+            [deviceId] => 7c76895b
+            [deviceName] => 23046RP50C
+            [batteryLevel] => 56
+            [isCharging] => 
+            [wifiConnected] => 
+            [cellularConnected] => 1
+            [networkType] => Unknown,Unknown
+            [location] => ♡这个不能告诉你们✿
+            [currentApp] => bin.mt.plus
+            [lastUpdate] => 2025-11-26 02:00:26
+            [clientIP] => 192.168.78.225
+        )
+
+)
+
+2025-11-26 02:00:37 - 保存结果: 成功
+2025-11-26 02:00:48 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 02:00:48 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":55,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:00:48 - 进入handleStatusUpdate函数
+2025-11-26 02:00:48 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":55,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:00:48 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 55
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+, 错误码: 0
+2025-11-26 02:00:48 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 55
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+
+2025-11-26 02:00:48 - 现有设备数据: Array
+(
+    [7c76895b] => Array
+        (
+            [deviceId] => 7c76895b
+            [deviceName] => 23046RP50C
+            [batteryLevel] => 56
+            [isCharging] => 
+            [wifiConnected] => 
+            [cellularConnected] => 1
+            [networkType] => Unknown,Unknown
+            [location] => ♡这个不能告诉你们✿
+            [currentApp] => bin.mt.plus
+            [lastUpdate] => 2025-11-26 02:00:37
+            [clientIP] => 192.168.78.225
+        )
+
+)
+
+2025-11-26 02:00:48 - 保存结果: 成功
+2025-11-26 02:00:58 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 02:00:58 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":55,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:00:58 - 进入handleStatusUpdate函数
+2025-11-26 02:00:58 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":55,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:00:58 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 55
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+, 错误码: 0
+2025-11-26 02:00:58 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 55
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+
+2025-11-26 02:00:58 - 现有设备数据: Array
+(
+    [7c76895b] => Array
+        (
+            [deviceId] => 7c76895b
+            [deviceName] => 23046RP50C
+            [batteryLevel] => 55
+            [isCharging] => 
+            [wifiConnected] => 
+            [cellularConnected] => 1
+            [networkType] => Unknown,Unknown
+            [location] => ♡这个不能告诉你们✿
+            [currentApp] => bin.mt.plus
+            [lastUpdate] => 2025-11-26 02:00:48
+            [clientIP] => 192.168.78.225
+        )
+
+)
+
+2025-11-26 02:00:58 - 保存结果: 成功
+2025-11-26 02:01:09 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 02:01:09 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":55,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:01:09 - 进入handleStatusUpdate函数
+2025-11-26 02:01:09 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":55,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:01:09 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 55
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+, 错误码: 0
+2025-11-26 02:01:09 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 55
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+
+2025-11-26 02:01:09 - 现有设备数据: Array
+(
+    [7c76895b] => Array
+        (
+            [deviceId] => 7c76895b
+            [deviceName] => 23046RP50C
+            [batteryLevel] => 55
+            [isCharging] => 
+            [wifiConnected] => 
+            [cellularConnected] => 1
+            [networkType] => Unknown,Unknown
+            [location] => ♡这个不能告诉你们✿
+            [currentApp] => bin.mt.plus
+            [lastUpdate] => 2025-11-26 02:00:58
+            [clientIP] => 192.168.78.225
+        )
+
+)
+
+2025-11-26 02:01:09 - 保存结果: 成功
+2025-11-26 02:01:20 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 02:01:20 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":55,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:01:20 - 进入handleStatusUpdate函数
+2025-11-26 02:01:20 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":55,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:01:20 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 55
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+, 错误码: 0
+2025-11-26 02:01:20 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 55
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+
+2025-11-26 02:01:20 - 现有设备数据: Array
+(
+    [7c76895b] => Array
+        (
+            [deviceId] => 7c76895b
+            [deviceName] => 23046RP50C
+            [batteryLevel] => 55
+            [isCharging] => 
+            [wifiConnected] => 
+            [cellularConnected] => 1
+            [networkType] => Unknown,Unknown
+            [location] => ♡这个不能告诉你们✿
+            [currentApp] => bin.mt.plus
+            [lastUpdate] => 2025-11-26 02:01:09
+            [clientIP] => 192.168.78.225
+        )
+
+)
+
+2025-11-26 02:01:20 - 保存结果: 成功
+2025-11-26 02:01:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:01:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:01:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:01:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764093683751}
+2025-11-26 02:01:30 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 02:01:30 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":55,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:01:30 - 进入handleStatusUpdate函数
+2025-11-26 02:01:30 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":55,"isCharging":0,"wifiConnected":0,"cellularConnected":1,"networkType":"Unknown,Unknown","location":"♡这个不能告诉你们✿","currentApp":"bin.mt.plus"}
+2025-11-26 02:01:30 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 55
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+, 错误码: 0
+2025-11-26 02:01:30 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 55
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 1
+    [networkType] => Unknown,Unknown
+    [location] => ♡这个不能告诉你们✿
+    [currentApp] => bin.mt.plus
+)
+
+2025-11-26 02:01:30 - 现有设备数据: Array
+(
+    [7c76895b] => Array
+        (
+            [deviceId] => 7c76895b
+            [deviceName] => 23046RP50C
+            [batteryLevel] => 55
+            [isCharging] => 
+            [wifiConnected] => 
+            [cellularConnected] => 1
+            [networkType] => Unknown,Unknown
+            [location] => ♡这个不能告诉你们✿
+            [currentApp] => bin.mt.plus
+            [lastUpdate] => 2025-11-26 02:01:20
+            [clientIP] => 192.168.78.225
+        )
+
+)
+
+2025-11-26 02:01:30 - 保存结果: 成功
+2025-11-26 02:01:58 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 02:01:58 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":0,"isCharging":0,"wifiConnected":0,"cellularConnected":0,"networkType":"ScreenOff","location":"设备息屏中","currentApp":"屏幕关闭"}
+2025-11-26 02:01:58 - 进入handleStatusUpdate函数
+2025-11-26 02:01:58 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":0,"isCharging":0,"wifiConnected":0,"cellularConnected":0,"networkType":"ScreenOff","location":"设备息屏中","currentApp":"屏幕关闭"}
+2025-11-26 02:01:58 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 0
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 0
+    [networkType] => ScreenOff
+    [location] => 设备息屏中
+    [currentApp] => 屏幕关闭
+)
+, 错误码: 0
+2025-11-26 02:01:58 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 0
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 
+    [networkType] => ScreenOff
+    [location] => 设备息屏中
+    [currentApp] => 屏幕关闭
+)
+
+2025-11-26 02:01:58 - 现有设备数据: Array
+(
+    [7c76895b] => Array
+        (
+            [deviceId] => 7c76895b
+            [deviceName] => 23046RP50C
+            [batteryLevel] => 55
+            [isCharging] => 
+            [wifiConnected] => 
+            [cellularConnected] => 1
+            [networkType] => Unknown,Unknown
+            [location] => ♡这个不能告诉你们✿
+            [currentApp] => bin.mt.plus
+            [lastUpdate] => 2025-11-26 02:01:30
+            [clientIP] => 192.168.78.225
+        )
+
+)
+
+2025-11-26 02:01:58 - 保存结果: 成功
+2025-11-26 02:02:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:02:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:02:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764093743744}
+2025-11-26 02:02:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:02:25 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:03:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:03:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:03:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:03:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764093803741}
+2025-11-26 02:04:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:04:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:04:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764093863754}
+2025-11-26 02:04:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:05:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:05:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+27.0.0.1
+2025-11-26 02:05:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764093923761}
+2025-11-26 02:05:55 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 02:05:55 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":0,"isCharging":0,"wifiConnected":0,"cellularConnected":0,"networkType":"ScreenOff","location":"设备息屏中","currentApp":"屏幕关闭"}
+2025-11-26 02:05:55 - 进入handleStatusUpdate函数
+2025-11-26 02:05:55 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":0,"isCharging":0,"wifiConnected":0,"cellularConnected":0,"networkType":"ScreenOff","location":"设备息屏中","currentApp":"屏幕关闭"}
+2025-11-26 02:05:55 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 0
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 0
+    [networkType] => ScreenOff
+    [location] => 设备息屏中
+    [currentApp] => 屏幕关闭
+)
+, 错误码: 0
+2025-11-26 02:05:55 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 0
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 
+    [networkType] => ScreenOff
+    [location] => 设备息屏中
+    [currentApp] => 屏幕关闭
+)
+
+2025-11-26 02:05:55 - 现有设备数据: Array
+(
+)
+
+2025-11-26 02:05:55 - 保存结果: 成功
+2025-11-26 02:06:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:06:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:06:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764093983760}
+2025-11-26 02:06:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:07:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:07:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:07:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:07:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094043753}
+2025-11-26 02:08:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:08:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094103762}
+2025-11-26 02:08:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:09:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:09:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:09:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094163768}
+2025-11-26 02:10:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:10:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094223765}
+2025-11-26 02:10:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:10:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:11:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:11:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:11:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:11:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094283772}
+2025-11-26 02:11:48 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 02:11:48 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":0,"isCharging":0,"wifiConnected":0,"cellularConnected":0,"networkType":"ScreenOff","location":"设备息屏中","currentApp":"屏幕关闭"}
+2025-11-26 02:11:48 - 进入handleStatusUpdate函数
+2025-11-26 02:11:48 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":0,"isCharging":0,"wifiConnected":0,"cellularConnected":0,"networkType":"ScreenOff","location":"设备息屏中","currentApp":"屏幕关闭"}
+2025-11-26 02:11:48 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 0
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 0
+    [networkType] => ScreenOff
+    [location] => 设备息屏中
+    [currentApp] => 屏幕关闭
+)
+, 错误码: 0
+2025-11-26 02:11:48 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 0
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 
+    [networkType] => ScreenOff
+    [location] => 设备息屏中
+    [currentApp] => 屏幕关闭
+)
+
+2025-11-26 02:11:48 - 现有设备数据: Array
+(
+)
+
+2025-11-26 02:11:48 - 保存结果: 成功
+2025-11-26 02:12:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:12:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:12:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094343774}
+2025-11-26 02:13:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+1
+2025-11-26 02:13:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:13:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094403775}
+2025-11-26 02:14:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:14:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:14:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094463769}
+2025-11-26 02:14:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:15:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:15:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:15:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094523776}
+2025-11-26 02:15:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:16:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:16:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:16:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094583775}
+2025-11-26 02:16:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:17:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:17:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:17:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:17:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094643776}
+2025-11-26 02:18:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:18:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:18:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:18:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094703783}
+2025-11-26 02:19:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:19:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:19:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:19:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094763791}
+2025-11-26 02:20:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:20:23 - 请求: devices, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:20:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094823791}
+2025-11-26 02:20:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:20:55 - 请求: status, 方法: POST, IP: 192.168.78.225
+2025-11-26 02:20:55 - POST数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":0,"isCharging":0,"wifiConnected":0,"cellularConnected":0,"networkType":"ScreenOff","location":"设备息屏中","currentApp":"屏幕关闭"}
+2025-11-26 02:20:55 - 进入handleStatusUpdate函数
+2025-11-26 02:20:55 - 原始输入数据: {"deviceId":"7c76895b","deviceName":"23046RP50C","batteryLevel":0,"isCharging":0,"wifiConnected":0,"cellularConnected":0,"networkType":"ScreenOff","location":"设备息屏中","currentApp":"屏幕关闭"}
+2025-11-26 02:20:55 - JSON解码结果: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 0
+    [isCharging] => 0
+    [wifiConnected] => 0
+    [cellularConnected] => 0
+    [networkType] => ScreenOff
+    [location] => 设备息屏中
+    [currentApp] => 屏幕关闭
+)
+, 错误码: 0
+2025-11-26 02:20:55 - 清理后的数据: Array
+(
+    [deviceId] => 7c76895b
+    [deviceName] => 23046RP50C
+    [batteryLevel] => 0
+    [isCharging] => 
+    [wifiConnected] => 
+    [cellularConnected] => 
+    [networkType] => ScreenOff
+    [location] => 设备息屏中
+    [currentApp] => 屏幕关闭
+)
+
+2025-11-26 02:20:56 - 现有设备数据: Array
+(
+)
+
+2025-11-26 02:20:56 - 保存结果: 成功
+2025-11-26 02:21:23 - 请求: get_online_users, 方法: GET, IP: 127.0.0.1
+2025-11-26 02:21:23 - 请求: update_online, 方法: POST, IP: 127.0.0.1
+2025-11-26 02:21:23 - POST数据: {"sessionId":"session_1764090043276_lbep6ego7","timestamp":1764094883788}

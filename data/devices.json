@@ -2,14 +2,14 @@
     "7c76895b": {
         "deviceId": "7c76895b",
         "deviceName": "23046RP50C",
-        "batteryLevel": 56,
+        "batteryLevel": 0,
         "isCharging": false,
         "wifiConnected": false,
-        "cellularConnected": true,
-        "networkType": "Unknown,Unknown",
-        "location": "♡这个不能告诉你们✿",
-        "currentApp": "bin.mt.plus",
-        "lastUpdate": "2025-11-26 01:59:34",
+        "cellularConnected": false,
+        "networkType": "ScreenOff",
+        "location": "设备息屏中",
+        "currentApp": "屏幕关闭",
+        "lastUpdate": "2025-11-26 02:20:56",
         "clientIP": "192.168.78.225"
     }
 }
