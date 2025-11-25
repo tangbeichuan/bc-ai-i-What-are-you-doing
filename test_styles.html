@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>样式测试页面</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .test-container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .test-section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+        h2 {
+            color: white;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>样式测试</h1>
+        <p class="subtitle">验证背景透明度和字体颜色修改</p>
+        
+        <div class="test-section">
+            <h2>1. 主容器样式</h2>
+            <div class="container" style="width: 300px; margin: 10px;">
+                <p>主容器背景透明度应为15%</p>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>2. 设备卡片样式</h2>
+            <div class="device-card online" style="width: 300px; margin: 10px;">
+                <div class="device-header">
+                    <div class="device-name">测试设备</div>
+                    <div class="device-status status-online">在线</div>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">设备ID</span>
+                    <span class="status-value">23113RKC6C</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">电池状态</span>
+                    <div class="battery-container">
+                        <div class="battery-fill battery-high" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">电量</span>
+                    <span class="status-value">80%</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>3. 服务器信息面板</h2>
+            <div class="server-info" style="width: 300px; margin: 10px;">
+                <div>
+                    <p>服务器状态</p>
+                    <p>在线</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>4. 在线人数指示器</h2>
+            <div class="online-users" style="position: static;">
+                <span>在线设备数：3</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

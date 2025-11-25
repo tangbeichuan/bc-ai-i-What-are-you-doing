@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>连接状态测试</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .test-container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+        .test-section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+        button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- 连接状态指示器 -->
+    <div class="connection-status" id="connection-status">
+        连接中...
+    </div>
+    
+    <div class="test-container">
+        <h1>连接状态测试</h1>
+        <p>点击以下按钮测试不同的连接状态显示</p>
+        
+        <div class="test-section">
+            <button onclick="updateStatus('connected')">测试连接状态：已连接</button>
+            <button onclick="updateStatus('disconnected')">测试连接状态：已断开</button>
+            <button onclick="updateStatus('reconnecting')">测试连接状态：重连中</button>
+            <button onclick="updateStatus('polling')">测试连接状态：轮询模式</button>
+        </div>
+        
+        <div class="test-section">
+            <h3>说明：</h3>
+            <ul>
+                <li>连接中...：初始状态，等待SSE连接建立</li>
+                <li>🟢 实时连接：SSE连接成功建立</li>
+                <li>🔴 已断开：连接中断</li>
+                <li>🟡 重连中...：尝试重新连接</li>
+                <li>🟡 轮询模式：SSE重连失败，切换到轮询模式</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // 模拟连接状态更新函数
+        function updateStatus(status) {
+            const statusElement = document.getElementById('connection-status');
+            if (statusElement) {
+                if (status === 'connected') {
+                    statusElement.innerHTML = '🟢 实时连接';
+                    statusElement.title = '与服务器保持实时连接';
+                    statusElement.className = 'connection-status connected';
+                } else if (status === 'disconnected') {
+                    statusElement.innerHTML = '🔴 已断开';
+                    statusElement.title = '与服务器连接已断开';
+                    statusElement.className = 'connection-status disconnected';
+                } else if (status === 'reconnecting') {
+                    statusElement.innerHTML = '🟡 重连中...';
+                    statusElement.title = '尝试重新连接服务器';
+                    statusElement.className = 'connection-status reconnecting';
+                } else {
+                    statusElement.innerHTML = '🟡 轮询模式';
+                    statusElement.title = '使用轮询模式更新设备状态';
+                    statusElement.className = 'connection-status connected';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

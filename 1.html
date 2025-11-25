@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遇到你的时间</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #1a1a2e;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            transition: background-image 1s ease-in-out;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .time-display {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .time-unit {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px 15px;
+            min-width: 140px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        .time-value {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: white;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .time-label {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .description {
+            margin-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        
+        .current-time {
+            text-align: center;
+            margin-top: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+        }
+        
+        .heart {
+            color: #ff6b6b;
+            font-size: 2rem;
+            margin: 0 10px;
+            animation: heartbeat 1.5s ease-in-out infinite both;
+        }
+        
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* 音乐播放器样式 */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 300px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .player-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .player-title {
+            font-size: 1rem;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex-grow: 1;
+        }
+
+        .player-toggle {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+        }
+
+        .player-content {
+            display: none;
+        }
+
+        .player-content.expanded {
+            display: block;
+        }
+
+        .player-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .control-btn {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+
+        .player-cover {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .cover-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .progress-container {
+            margin-top: 10px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .progress {
+            height: 100%;
+            background: rgba(255, 255, 255, 0.7);
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        .time-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* 动画定义 */
+        @keyframes heartbeat {
+            from {
+                transform: scale(1);
+                transform-origin: center center;
+                animation-timing-function: ease-out;
+            }
+            10% {
+                transform: scale(0.91);
+                animation-timing-function: ease-in;
+            }
+            17% {
+                transform: scale(0.98);
+                animation-timing-function: ease-out;
+            }
+            33% {
+                transform: scale(0.87);
+                animation-timing-function: ease-in;
+            }
+            45% {
+                transform: scale(1);
+                animation-timing-function: ease-out;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* 最小化播放器样式 */
+        .music-player.minimized {
+            width: 200px;
+            height: 60px;
+            padding: 10px;
+        }
+
+        .music-player.minimized .player-cover,
+        .music-player.minimized .player-controls,
+        .music-player.minimized .progress-container {
+            display: none;
+        }
+
+        .music-player.minimized .player-header {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .time-unit {
+                min-width: 120px;
+                padding: 20px 10px;
+            }
+            
+            .time-value {
+                font-size: 2.5rem;
+            }
+            
+            .music-player {
+                width: calc(100% - 40px);
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay" id="backgroundOverlay"></div>
+    <div class="container">
+        <h1>遇到你已经 <span id="days-count">0</span> 天</h1>
+        
+        <div class="time-display">
+            <div class="time-unit">
+                <div class="time-value" id="days">0</div>
+                <div class="time-label">天</div>
+            </div>
+            <div class="time-unit">
+                <div class="time-value" id="hours">0</div>
+                <div class="time-label">小时</div>
+            </div>
+            <div class="time-unit">
+                <div class="time-value" id="minutes">0</div>
+                <div class="time-label">分钟</div>
+            </div>
+            <div class="time-unit">
+                <div class="time-value" id="seconds">0</div>
+                <div class="time-label">秒</div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <p>每一秒都是珍贵的回忆 <span class="heart">❤</span> 感恩与你相遇的每一刻</p>
+        </div>
+        
+        <div class="current-time">
+            当前时间: <span id="currentTime"></span>
+        </div>
+    </div>
+
+    <!-- 音乐播放器 -->
+    <div class="music-player" id="musicPlayer">
+        <div class="player-header">
+            <div class="player-title" id="currentSong">音乐播放器</div>
+            <button class="player-toggle" id="playerToggle">-</button>
+        </div>
+        <div class="player-content expanded" id="playerContent">
+            <div class="player-cover">
+                <img src="images/cover.jpg" alt="专辑封面" class="cover-image" id="albumCover">
+            </div>
+            <div class="player-controls">
+                <button class="control-btn" id="prevBtn">⏮</button>
+                <button class="control-btn" id="playBtn">▶</button>
+                <button class="control-btn" id="nextBtn">⏭</button>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="time-info">
+                    <span id="currentTimeDisplay">0:00</span>
+                    <span id="durationDisplay">0:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 隐藏的音频元素 -->
+    <audio id="audioPlayer"></audio>
+
+    <script>
+        const configDate = new Date('2025-11-01T00:00:00');
+        
+        // 更新显示的时间
+        function updateTime() {
+            const now = new Date();
+            const diff = now - configDate;
+            
+            // 计算天、小时、分钟、秒
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / (1000));
+            
+            // 更新显示
+            document.getElementById('days-count').textContent = days;
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            
+            // 更新当前时间
+            document.getElementById('currentTime').textContent = now.toLocaleString('zh-CN');
+        }
+        
+        // 初始加载
+        updateTime();
+        
+        // 每秒更新一次
+        setInterval(updateTime, 1000);
+        
+        // 动态获取背景图片
+        let backgroundImages = [];
+        
+        // 模拟从文件夹获取图片列表
+        function getBackgroundImages() {
+            // 这里应该是一个真实的API调用或文件扫描逻辑
+            // 为了演示，我们假设有10张图片
+            const imageCount = 10;
+            backgroundImages = [
+                'images/a.jpg'
+            ];
+            
+            for (let i = 1; i <= imageCount; i++) {
+                backgroundImages.push(`images/background${i}.jpg`);
+            }
+            
+            // 如果没有图片，使用默认图片
+            if (backgroundImages.length === 0) {
+                backgroundImages.push('images/default-background.jpg');
+            }
+        }
+        
+        let currentImageIndex = 0;
+        
+        function changeBackground() {
+            const overlay = document.getElementById('backgroundOverlay');
+            
+            // 如果还没有获取图片列表，先获取
+            if (backgroundImages.length === 0) {
+                getBackgroundImages();
+            }
+            
+            // 随机选择下一张图片
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * backgroundImages.length);
+            } while (randomIndex === currentImageIndex && backgroundImages.length > 1);
+            currentImageIndex = randomIndex;
+            
+            // 先淡出
+            overlay.style.opacity = '0';
+            
+            setTimeout(() => {
+                overlay.style.backgroundImage = `url('${backgroundImages[randomIndex]}')`;
+                // 再淡入
+                overlay.style.opacity = '1';
+            }, 1000);
+        }
+        
+        // 初始设置背景
+        getBackgroundImages();
+        if (backgroundImages.length > 0) {
+            document.getElementById('backgroundOverlay').style.backgroundImage = `url('${backgroundImages[0]}')`;
+        }
+        
+        // 每10秒更换一次背景
+        setInterval(changeBackground, 10000);
+
+        // 音乐播放器功能
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playBtn = document.getElementById('playBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const progressBar = document.getElementById('progressBar');
+        const progress = document.getElementById('progress');
+        const currentTimeDisplay = document.getElementById('currentTimeDisplay');
+        const durationDisplay = document.getElementById('durationDisplay');
+        const currentSong = document.getElementById('currentSong');
+        const playerToggle = document.getElementById('playerToggle');
+        const playerContent = document.getElementById('playerContent');
+        const albumCover = document.getElementById('albumCover');
+        const musicPlayer = document.getElementById('musicPlayer');
+
+        // 播放列表
+        const playlist = [
+            { title: "遇见你的每一天", src: "music/sample1.mp3", cover: "images/a.jpg" },
+            { title: "示例音乐2", src: "music/sample2.mp3", cover: "images/cover2.jpg" },
+            { title: "示例音乐3", src: "music/sample3.mp3", cover: "images/cover3.jpg" }
+        ];
+
+        let currentTrackIndex = 0;
+
+        // 初始化音频
+        function initAudio() {
+            audioPlayer.src = playlist[currentTrackIndex].src;
+            currentSong.textContent = playlist[currentTrackIndex].title;
+            albumCover.src = playlist[currentTrackIndex].cover;
+        }
+        
+        // 尝试播放音频
+        function attemptPlay() {
+            audioPlayer.play().then(() => {
+                playBtn.textContent = '⏸';
+            }).catch(error => {
+                console.log('自动播放失败，需要用户交互:', error);
+                playBtn.textContent = '▶';
+            });
+        }
+        
+        // 添加点击播放器任何按钮时尝试播放
+        function addPlayAttemptListener(element) {
+            element.addEventListener('click', function() {
+                if (audioPlayer.paused && playlist.length > 0) {
+                    attemptPlay();
+                }
+            });
+        }
+
+        // 播放/暂停切换
+        function togglePlay() {
+            if (audioPlayer.paused) {
+                audioPlayer.play().then(() => {
+                    playBtn.textContent = '⏸';
+                }).catch(error => {
+                    console.log('播放失败:', error);
+                    // 提示用户需要交互才能播放
+                    alert('请先点击页面任意位置，然后点击播放按钮');
+                });
+            } else {
+                audioPlayer.pause();
+                playBtn.textContent = '▶';
+            }
+        }
+
+        // 播放上一曲
+        function playPrev() {
+            if (!isShuffled) {
+                currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
+            } else {
+                // 在随机模式下，上一曲也随机选择
+                let randomIndex;
+                do {
+                    randomIndex = Math.floor(Math.random() * playlist.length);
+                } while (randomIndex === currentTrackIndex && playlist.length > 1);
+                currentTrackIndex = randomIndex;
+            }
+            initAudio();
+            if (!audioPlayer.paused) {
+                audioPlayer.play();
+            }
+        }
+
+        // 播放下一曲
+        function playNext() {
+            if (!isShuffled) {
+                currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+            } else {
+                // 随机播放功能
+                let randomIndex;
+                do {
+                    randomIndex = Math.floor(Math.random() * playlist.length);
+                } while (randomIndex === currentTrackIndex && playlist.length > 1);
+                currentTrackIndex = randomIndex;
+            }
+            initAudio();
+            if (!audioPlayer.paused) {
+                audioPlayer.play();
+            }
+        }
+
+        // 更新进度条
+        function updateProgress() {
+            const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            progress.style.width = `${percent}%`;
+            
+            // 更新时间显示
+            currentTimeDisplay.textContent = formatTime(audioPlayer.currentTime);
+        }
+
+        // 格式化时间显示
+        function formatTime(seconds) {
+            const min = Math.floor(seconds / 60);
+            const sec = Math.floor(seconds % 60);
+            return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+        }
+
+        // 设置播放进度
+        function setProgress(e) {
+            const width = this.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audioPlayer.duration;
+            
+            audioPlayer.currentTime = (clickX / width) * duration;
+        }
+
+        // 当音频加载完成时更新时长
+        audioPlayer.addEventListener('loadedmetadata', function() {
+            durationDisplay.textContent = formatTime(audioPlayer.duration);
+        });
+
+        // 当音频播放时更新进度
+        audioPlayer.addEventListener('timeupdate', updateProgress);
+
+        // 随机播放模式
+        let isShuffled = false;
+        const shuffleBtn = document.createElement('button');
+        shuffleBtn.className = 'control-btn';
+        shuffleBtn.textContent = '🔀';
+        shuffleBtn.title = '随机播放';
+        shuffleBtn.style.marginLeft = '10px';
+
+        // 添加随机播放按钮到播放器控制栏
+        document.querySelector('.player-controls').appendChild(shuffleBtn);
+
+        // 随机播放按钮事件
+        shuffleBtn.addEventListener('click', function() {
+            isShuffled = !isShuffled;
+            if (isShuffled) {
+                shuffleBtn.style.background = 'rgba(255, 255, 255, 0.6)';
+            } else {
+                shuffleBtn.style.background = 'rgba(255, 255, 255, 0.3)';
+            }
+        });
+
+        // 当音频播放结束时播放下一曲
+        audioPlayer.addEventListener('ended', playNext);
+
+        // 事件监听器
+        playBtn.addEventListener('click', togglePlay);
+        prevBtn.addEventListener('click', playPrev);
+        nextBtn.addEventListener('click', playNext);
+        progressBar.addEventListener('click', setProgress);
+
+        // 播放器展开/收起功能
+        playerToggle.addEventListener('click', function() {
+            playerContent.classList.toggle('expanded');
+            musicPlayer.classList.toggle('minimized');
+            
+            if (playerContent.classList.contains('expanded')) {
+                playerToggle.textContent = '-';
+            } else {
+                playerToggle.textContent = '+';
+            }
+        });
+
+        // 初始化音频
+        initAudio();
+        
+        // 页面点击后尝试自动播放
+        document.addEventListener('click', function() {
+            if (audioPlayer.paused && playlist.length > 0) {
+                attemptPlay();
+            }
+        }, { once: true }); // 只监听一次点击
+    </script>
+</body>
+</html>

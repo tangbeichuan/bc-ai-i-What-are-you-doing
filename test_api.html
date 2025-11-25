@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API接口测试工具</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .test-section h2 {
+            color: #444;
+            margin-top: 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .success {
+            color: #28a745;
+        }
+        .error {
+            color: #dc3545;
+        }
+        .status {
+            margin-top: 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .status.success {
+            background-color: #d4edda;
+        }
+        .status.error {
+            background-color: #f8d7da;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: monospace;
+            resize: vertical;
+        }
+        .test-data {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 手机状态监控系统 - API测试工具</h1>
+        
+        <!-- 状态上报测试 -->
+        <div class="test-section">
+            <h2>1. 状态上报功能测试</h2>
+            <div class="form-group">
+                <label for="statusData">测试数据 (JSON):</label>
+                <textarea id="statusData">{
+    "deviceId": "test_device_001",
+    "deviceName": "测试设备",
+    "screenOn": true,
+    "batteryLevel": 85,
+    "isCharging": true,
+    "wifiConnected": true,
+    "cellularConnected": false,
+    "networkType": "WiFi",
+    "location": "测试位置",
+    "currentApp": "测试应用"
+}</textarea>
+            </div>
+            <button onclick="testStatusReport()">发送状态上报</button>
+            <div id="statusResult" class="result"></div>
+        </div>
+        
+        <!-- 设备列表获取测试 -->
+        <div class="test-section">
+            <h2>2. 设备列表获取测试</h2>
+            <button onclick="testGetDevices()">获取设备列表</button>
+            <div id="devicesResult" class="result"></div>
+        </div>
+        
+        <!-- 在线状态获取测试 -->
+        <div class="test-section">
+            <h2>3. 在线状态获取测试</h2>
+            <button onclick="testGetOnlineStatus()">获取在线状态</button>
+            <div id="onlineResult" class="result"></div>
+        </div>
+        
+        <!-- 背景文件列表测试 -->
+        <div class="test-section">
+            <h2>4. 背景文件列表测试</h2>
+            <button onclick="testListBackground('images')">获取图片列表</button>
+            <button onclick="testListBackground('videos')">获取视频列表</button>
+            <div id="backgroundResult" class="result"></div>
+        </div>
+        
+        <!-- 调试日志查看 -->
+        <div class="test-section">
+            <h2>5. 调试日志查看</h2>
+            <button onclick="viewDebugLog()">查看调试日志</button>
+            <div id="logResult" class="result"></div>
+        </div>
+    </div>
+
+    <script>
+        // API基础URL
+        const API_BASE_URL = '/api.php';
+        
+        // 发送API请求
+        async function sendApiRequest(action, method = 'GET', data = null) {
+            const url = `${API_BASE_URL}?action=${action}`;
+            const options = {
+                method: method,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            };
+            
+            if (data && method === 'POST') {
+                options.body = JSON.stringify(data);
+            }
+            
+            try {
+                const response = await fetch(url, options);
+                const responseData = await response.json();
+                return {
+                    status: response.status,
+                    data: responseData,
+                    success: response.ok
+                };
+            } catch (error) {
+                return {
+                    status: 0,
+                    error: error.message,
+                    success: false
+                };
+            }
+        }
+        
+        // 显示结果
+        function displayResult(elementId, result, testName) {
+            const element = document.getElementById(elementId);
+            let html = `测试: ${testName}\n`;
+            
+            if (result.success) {
+                html += `状态: <span class="success">成功 (${result.status})</span>\n`;
+                html += `响应: ${JSON.stringify(result.data, null, 2)}\n`;
+            } else {
+                html += `状态: <span class="error">失败</span>\n`;
+                html += `错误: ${result.error || '未知错误'}\n`;
+            }
+            
+            element.textContent = html;
+        }
+        
+        // 测试状态上报
+        async function testStatusReport() {
+            const data = JSON.parse(document.getElementById('statusData').value);
+            const result = await sendApiRequest('status', 'POST', data);
+            displayResult('statusResult', result, '状态上报');
+        }
+        
+        // 测试获取设备列表
+        async function testGetDevices() {
+            const result = await sendApiRequest('devices');
+            displayResult('devicesResult', result, '获取设备列表');
+        }
+        
+        // 测试获取在线状态
+        async function testGetOnlineStatus() {
+            const result = await sendApiRequest('get_online_status');
+            displayResult('onlineResult', result, '获取在线状态');
+        }
+        
+        // 测试获取背景文件列表
+        async function testListBackground(type) {
+            const result = await sendApiRequest(`list_bg_files&type=${type}`);
+            displayResult('backgroundResult', result, `获取${type}列表`);
+        }
+        
+        // 查看调试日志
+        async function viewDebugLog() {
+            try {
+                const response = await fetch('/debug.log');
+                const logContent = await response.text();
+                const element = document.getElementById('logResult');
+                element.textContent = `调试日志内容:\n${logContent}`;
+            } catch (error) {
+                const element = document.getElementById('logResult');
+                element.textContent = `查看日志失败: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
